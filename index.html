@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <form id="registrationForm" class="form" name="RegForm" onsubmit="return validateForm()">
+        <h1>Registration Form</h1>
+        <div>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name" />
+            <span id="fname-error" class="error-message"></span>
+        </div>
+        <div>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name" />
+            <span id="lname-error" class="error-message"></span>
+        </div>
+        <div>
+            <label for="college">College Name:</label>
+            <input type="text" id="college" name="college" placeholder="Enter your college name" />
+            <span id="college-error" class="error-message"></span>
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" />
+            <span id="email-error" class="error-message"></span>
+        </div>
+        <div>
+            <label for="gender">Gender:</label>
+            <div class="gender">
+                <input type="radio" id="male" name="gender" value="male" class="abc">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" class="abc">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other" class="abc">
+                <label for="other">Other</label>
+            </div>
+            <span id="gender-error" class="error-message"></span>
+        </div>
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            <span id="dob-error" class="error-message"></span>
+        </div>
+        <div>
+            <input type="submit" value="Send" name="Submit" />
+        </div>
+    </form>
+
+            <!--*************************  OTP Form  *****************************-->
+
+    <form id="otpForm" class="form hidden" name="RegForm" onsubmit="return submitForm()">
+        <h1>OTP Verification</h1>
+        <div>
+            <label for="otp">OTP:</label>
+            <input type="numeric" id="otp" name="otp" placeholder="Enter OTP" maxlength="6" />
+            <span id="otp-error" class="error-message"></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit" name="Submit" />
+        </div>
+    </form>
+
+            <!--***********************  Login Form   ****************************-->
+
+    <form id="loginForm" class="form hidden" name="RegForm" onsubmit="return loginForm()">
+        <h1>Login Form</h1>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" placeholder="Enter your registered email" />
+            <span id="email-error" class="error-message"></span>
+        </div>
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" placeholder="Enetr your DOB">
+            <span id="dob-error" class="error-message"></span>
+        </div>
+        <div>
+            <input type="submit" value="Login" name="Submit" />
+        </div>
+    </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
